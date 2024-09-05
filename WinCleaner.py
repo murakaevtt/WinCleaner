@@ -26,7 +26,7 @@ def deleteFilesInFolder(folder_path):
 
 while answer != "3":
     os.system("cls")
-    print("\t\tWinCleaner by MTT\n")
+    print("\t\tCleaner\n")
     print("1. Start the cleaning.")
     print("2. Check the version.")
     print("3. Quit.\n")
@@ -36,26 +36,25 @@ while answer != "3":
     if answer == "1":
         os.system("cls")
 
-        print("1. AMD Graphics Card.")
-        print("2. NVIDIA Graphics Card.")
+        print("1. NVIDIA Graphics Card.")
+        print("2. Other Graphics Card.")
         graphics_card = int(input("Which grapgics card do you have?: "))
 
         os.system("cls")
 
         print("Cleaning the system...")
 
-        deleteFilesInFolder(f"C:\\Users\\{username}\\AppData\\Local\\Temp")
-        deleteFilesInFolder("C:\\Windows\\Temp")
-        deleteFilesInFolder("C:\\Windows\\SoftwareDistribution")
-        deleteFilesInFolder("C:\\Windows\\Prefetch")
+        deleteFilesInFolder(f"C:/Users/{username}/AppData/Local/Temp")
+        deleteFilesInFolder("C:/Windows/Temp")
+        deleteFilesInFolder("C:/Windows/SoftwareDistribution")
+        deleteFilesInFolder("C:/Windows/Prefetch")
 
         os.system('cls')
 
         os.system('WSReset.exe')
         os.system('ipconfig /flushdns')
         if graphics_card == 1:
-            deleteFilesInFolder(f"C:\\Users\\{username}\\AppData\\Local\\NVIDIA\\GLCache")
-            pass
+            deleteFilesInFolder(f"C:/Users/{username}/AppData/Local/NVIDIA/GLCache")
         elif graphics_card == 2:
             pass
         os.system('Dism.exe /online /cleanup-image /AnalyzeComponentStore')
