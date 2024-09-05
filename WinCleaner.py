@@ -26,7 +26,7 @@ def deleteFilesInFolder(folder_path):
 
 while answer != "3":
     os.system("cls")
-    print("\t\tCleaner\n")
+    print("\t\tWinCleaner\n")
     print("1. Start the cleaning.")
     print("2. Check the version.")
     print("3. Quit.\n")
