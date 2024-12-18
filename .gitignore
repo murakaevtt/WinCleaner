@@ -1,2 +1,8 @@
 .venv
 .idea
+WinCleaner.build
+WinCleaner.dist
+WinCleaner.onefile-build
+WinCleaner.exe
+nuitka-crash-report.xml
+__pycache__
